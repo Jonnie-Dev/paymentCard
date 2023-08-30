@@ -3,3 +3,86 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+body {
+  font-family: "IBM Plex Mono", monospace;
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  max-width: 36rem;
+}
+
+.card-section {
+  font-family: IBM Plex Mono;
+  max-width: 28rem;
+  padding: 32px 24px;
+  margin: 0 auto;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 80px;
+  border-radius: 16px;
+  background: linear-gradient(
+    144deg,
+    rgba(0, 0, 0, 0.54) 0%,
+    rgba(0, 0, 0, 0.82) 67.4%,
+    rgba(0, 0, 0, 0.77) 89.4%
+  );
+  box-shadow: 21px 19px 19px -5px rgba(66, 77, 73, 0.25);
+  backdrop-filter: blur(20px);
+
+  .section-logos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .card-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .card-holder,
+    .card-date {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+      & > h4 {
+        color: #fff;
+        text-align: center;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+      }
+      & > p {
+        color: rgba(255, 255, 255, 0.8);
+        text-align: center;
+        text-shadow: -1px 1px 0px rgba(255, 255, 255, 0.09);
+        font-family: IBM Plex Mono;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+      }
+    }
+
+    .card-holder {
+      align-items: flex-start;
+    }
+
+    .card-date {
+      align-items: flex-end;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  main {
+    margin-inline: 1rem;
+  }
+}

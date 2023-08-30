@@ -2,11 +2,172 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link href="./style.css" rel="stylesheeet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
     <title>Card Payment</title>
   </head>
   <body>
+    <main>
+      <section class="card-section">
+        <div class="section-logos">
+          <div class="logo">
+            <svg
+              width="64"
+              height="42"
+              viewBox="0 0 42 28"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <mask
+                id="mask0_202_16"
+                style="mask-type: luminance"
+                maskUnits="userSpaceOnUse"
+                x="3"
+                y="2"
+                width="35"
+                height="22"
+              >
+                <path
+                  d="M3.28424 2.79764H37.8048V23.9375H3.28424V2.79764Z"
+                  fill="white"
+                />
+              </mask>
+              <g mask="url(#mask0_202_16)">
+                <mask
+                  id="mask1_202_16"
+                  style="mask-type: luminance"
+                  maskUnits="userSpaceOnUse"
+                  x="3"
+                  y="2"
+                  width="35"
+                  height="22"
+                >
+                  <path
+                    d="M34.3138 23.9376H6.77225C5.84631 23.9376 4.95933 23.5775 4.30607 22.9346C3.64982 22.2918 3.28424 21.4168 3.28424 20.509V6.22926C3.28424 4.3364 4.84546 2.80069 6.77225 2.80069H34.3138C35.2397 2.80069 36.1267 3.16081 36.78 3.80367C37.4362 4.44652 37.8048 5.32152 37.8048 6.22926V20.509C37.8048 22.4019 36.2406 23.9376 34.3138 23.9376Z"
+                    fill="white"
+                  />
+                </mask>
+                <g mask="url(#mask1_202_16)">
+                  <path
+                    d="M34.3137 23.9375L6.77223 23.9375C5.84629 23.9375 4.9593 23.5774 4.30605 22.9345C3.6498 22.2917 3.28422 21.4167 3.28422 20.5089V6.22917C3.28422 4.33631 4.84543 2.8006 6.77223 2.8006L34.3137 2.8006C35.2397 2.8006 36.1267 3.16071 36.7799 3.80357C37.4362 4.44643 37.8047 5.32143 37.8047 6.22917V20.5089C37.8047 22.4018 36.2405 23.9375 34.3137 23.9375Z"
+                    stroke="white"
+                    stroke-width="3.99897"
+                  />
+                </g>
+              </g>
+              <path
+                d="M22.0455 7.03119H19.2946V14.3437C19.2946 14.7782 19.2946 15.1621 19.2587 15.5639C19.1718 16.6264 18.6623 17.2693 17.6465 17.2693C16.6097 17.2693 15.9445 16.7306 15.8396 15.1443L15.8036 14.5699H13.0707L13.0857 15.1443C13.1576 17.6711 14.5061 19.2901 17.5237 19.2901C20.5202 19.2901 21.8717 17.811 21.9945 15.7187C22.0455 14.9002 22.0455 14.5193 22.0455 13.9955V7.03119Z"
+                fill="white"
+              />
+              <path
+                d="M24.2333 8.26489H30.565"
+                stroke="white"
+                stroke-width="2.03949"
+              />
+              <mask
+                id="mask2_202_16"
+                style="mask-type: luminance"
+                maskUnits="userSpaceOnUse"
+                x="25"
+                y="15"
+                width="5"
+                height="5"
+              >
+                <path
+                  d="M25.4589 15.878H29.0938V19.4881H25.4589V15.878Z"
+                  fill="white"
+                />
+              </mask>
+              <g mask="url(#mask2_202_16)">
+                <mask
+                  id="mask3_202_16"
+                  style="mask-type: luminance"
+                  maskUnits="userSpaceOnUse"
+                  x="25"
+                  y="15"
+                  width="5"
+                  height="5"
+                >
+                  <path
+                    d="M27.2778 15.878C26.274 15.878 25.4589 16.6845 25.4589 17.6816C25.4589 18.6786 26.274 19.4881 27.2778 19.4881C28.2787 19.4881 29.0938 18.6786 29.0938 17.6816C29.0938 16.6845 28.2787 15.878 27.2778 15.878Z"
+                    fill="white"
+                  />
+                </mask>
+                <g mask="url(#mask3_202_16)">
+                  <path
+                    d="M25.4589 15.878H29.0938V19.4881H25.4589V15.878Z"
+                    fill="white"
+                  />
+                </g>
+              </g>
+            </svg>
+          </div>
+          <div class="card-logo"></div>
+        </div>
+        <div class="card-details">
+          <div class="card-holder">
+            <h4>CARD HOLDER</h4>
+            <p>JOHN AREOLA KOLADE</p>
+          </div>
+          <div class="card-date">
+            <h4>EXPIRES</h4>
+            <p>05/24</p>
+          </div>
+        </div>
+      </section>
+      <section class="form-section">
+        <form>
+          <label for="input1">CARD NUMBER</label>
+          <div class="card-num">
+            <input
+              id="input1"
+              type="text"
+              maxlength="4"
+              id="input1"
+              oninput="moveToNext(this, 'input2')"
+            />
+            <input
+              type="text"
+              maxlength="4"
+              id="input2"
+              oninput="moveToNext(this, 'input3')"
+            />
+            <input
+              type="text"
+              maxlength="4"
+              id="input3"
+              oninput="moveToNext(this, 'input4')"
+            />
+            <input type="text" maxlength="4" id="input4" />
+          </div>
+          <label for="card-num">CARD HOLDER</label>
+          <input id="card-num" type="text" placeholder="John Doe" />
+
+          <div>
+            <div class="expiration-date">
+              <label>EXPIRATION DATE</label>
+              <select id="monthSelect">
+                <option value="" selected></option>
+              </select>
+              <select id="yearSelect" name="year">
+                <option value="" selected></option>
+              </select>
+            </div>
+            <div class="cvv">
+              <label for="cvv">CVV</label>
+              <input id="cvv" type="number" placeholder="123" />
+            </div>
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+    </main>
     <script src="./index.js"></script>
   </body>
 </html>

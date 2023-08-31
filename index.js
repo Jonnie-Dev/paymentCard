@@ -1,14 +1,24 @@
-// function moveToNext(currentInput, nextInputId) {
-//   const maxLength = parseInt(currentInput.getAttribute("maxlength"));
-//   const currentLength = currentInput.value.length;
+function moveToNext(currentInput, nextInputId) {
+  const maxLength = parseInt(currentInput.getAttribute("maxlength"));
+  const currentLength = currentInput.value.length;
 
-//   if (currentLength >= maxLength) {
-//     const nextInput = document.getElementById(nextInputId);
-//     if (nextInput) {
-//       nextInput.focus();
-//     }
-//   }
-// }
+  if (currentLength >= maxLength) {
+    const nextInput = document.getElementById(nextInputId);
+    if (nextInput) {
+      nextInput.focus();
+    }
+  }
+}
+
+const input = document.querySelectorAll(".num-input");
+
+[...input].map((el) =>
+  el.addEventListener("input", function () {
+    if (this.value.length > 4) {
+      this.value = this.value.slice(0, 4);
+    }
+  })
+);
 
 const cardLogo = document.querySelector(".card-logo");
 const visa = `<svg width="47" height="15" viewBox="0 0 47 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -28,13 +38,13 @@ cardLogo.innerHTML = visa;
 const monthSelect = document.getElementById("monthSelect");
 const yearSelect = document.getElementById("yearSelect");
 const currentYear = new Date().getFullYear();
-const startYear = 2020; // Adjust as needed
-const endYear = currentYear + 10; // Adjust the range as needed
+const startYear = 2020;
+const endYear = currentYear + 10;
 
 for (let month = 1; month <= 12; month++) {
   const option = document.createElement("option");
-  option.value = month;
-  option.textContent = month;
+  option.value = `${month < 10 ? 0 : ""}${month}`;
+  option.textContent = `${month < 10 ? 0 : ""}${month}`;
   monthSelect.appendChild(option);
 }
 

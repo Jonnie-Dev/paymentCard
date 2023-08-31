@@ -113,58 +113,78 @@
         <div class="card-details">
           <div class="card-holder">
             <h4>CARD HOLDER</h4>
-            <p>JOHN AREOLA KOLADE</p>
+            <p id="card-name">JOHN AREOLA KOLADE</p>
           </div>
           <div class="card-date">
             <h4>EXPIRES</h4>
-            <p>05/24</p>
+            <p id="card-date">05/24</p>
           </div>
         </div>
       </section>
       <section class="form-section">
         <form>
-          <label for="input1">CARD NUMBER</label>
+          <label class="label" for="input1">CARD NUMBER</label>
           <div class="card-num">
             <input
+              placeholder="0000"
               id="input1"
-              type="text"
+              class="num-input"
+              type="number"
               maxlength="4"
-              id="input1"
               oninput="moveToNext(this, 'input2')"
             />
             <input
-              type="text"
+              placeholder="0000"
+              class="num-input"
+              type="number"
               maxlength="4"
               id="input2"
               oninput="moveToNext(this, 'input3')"
             />
             <input
-              type="text"
+              placeholder="0000"
+              class="num-input"
+              type="number"
               maxlength="4"
               id="input3"
               oninput="moveToNext(this, 'input4')"
             />
-            <input type="text" maxlength="4" id="input4" />
+            <input
+              placeholder="0000"
+              type="number"
+              class="num-input"
+              maxlength="4"
+              id="input4"
+            />
           </div>
-          <label for="card-num">CARD HOLDER</label>
-          <input id="card-num" type="text" placeholder="John Doe" />
+          <p class="err card-num-err">Invalid Card number</p>
+          <div class="card-hold">
+            <label class="label" for="card-num">CARD HOLDER</label>
+            <input id="card-num" type="text" placeholder="John Doe" />
+          </div>
+          <p class="err card-hold-err">Invalid name</p>
 
-          <div>
+          <div class="date-cvv">
             <div class="expiration-date">
               <label>EXPIRATION DATE</label>
-              <select id="monthSelect">
-                <option value="" selected></option>
-              </select>
-              <select id="yearSelect" name="year">
-                <option value="" selected></option>
-              </select>
+              <div>
+                <select id="monthSelect" name="month">
+                  <option value="" selected></option>
+                </select>
+                <select id="yearSelect" name="year">
+                  <option value="" selected></option>
+                </select>
+              </div>
+              <p class="err card-hold-err">Pick a future date</p>
             </div>
+
             <div class="cvv">
-              <label for="cvv">CVV</label>
+              <label class="label" for="cvv">CVV</label>
               <input id="cvv" type="number" placeholder="123" />
+              <p class="err card-hold-err">Invalid CVV</p>
             </div>
           </div>
-          <button type="submit">Submit</button>
+          <button class="form-submit" type="submit">Submit</button>
         </form>
       </section>
     </main>

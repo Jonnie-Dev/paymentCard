@@ -94,7 +94,7 @@ const input = document.querySelectorAll(".num-input");
   })
 );
 
-// cardLogo.innerHTML = visa;
+cardLogo.innerHTML = visa;
 
 const monthSelect = document.getElementById("monthSelect");
 const yearSelect = document.getElementById("yearSelect");

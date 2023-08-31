@@ -137,7 +137,7 @@ input[type="number"] {
   }
 
   .card-hold {
-    margin-top: 0.5rem;
+    margin-top: 1.5rem;
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
@@ -156,7 +156,7 @@ input[type="number"] {
   .date-cvv {
     display: flex;
     justify-content: space-between;
-    margin-top: 0.5rem;
+    margin-top: 1.5rem;
 
     .expiration-date {
       display: flex;
@@ -204,7 +204,7 @@ input[type="number"] {
   font-weight: 500;
   border: none;
   background: #a9ffc2;
-  margin-top: 1.5rem;
+  margin-top: 2rem;
   width: 100%;
   padding: 0.75rem;
   border-radius: 0.25rem;
@@ -212,7 +212,7 @@ input[type="number"] {
   &:hover,
   &:active,
   &:focus {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
   }
 }
 

@@ -114,11 +114,15 @@
         <div class="card-details">
           <div class="card-holder">
             <h4>CARD HOLDER</h4>
-            <p id="card-name">JOHN AREOLA KOLADE</p>
+            <p id="card-name">
+              <!-- JOHN AREOLA KOLADE -->
+            </p>
           </div>
           <div class="card-date">
             <h4>EXPIRES</h4>
-            <p id="card-date">05/24</p>
+            <p id="card-date">
+              <!-- 05/24 -->
+            </p>
           </div>
         </div>
       </section>
@@ -161,7 +165,7 @@
           <p class="err card-num-err">Invalid Card number</p>
           <div class="card-hold">
             <label class="label" for="card-num">CARD HOLDER</label>
-            <input id="card-num" type="text" placeholder="John Doe" />
+            <input id="card-hold-input" type="text" placeholder="John Doe" />
           </div>
           <p class="err card-hold-err">Invalid name</p>
 
@@ -176,13 +180,13 @@
                   <option value="" selected></option>
                 </select>
               </div>
-              <p class="err card-hold-err">Pick a future date</p>
+              <p class="err card-date-err">Pick a future date</p>
             </div>
 
             <div class="cvv">
               <label class="label" for="cvv">CVV</label>
               <input id="cvv" type="number" placeholder="123" />
-              <p class="err card-hold-err">Invalid CVV</p>
+              <p class="err card-cvv-err">Invalid CVV</p>
             </div>
           </div>
           <button class="form-submit" type="submit">Submit</button>

@@ -99,6 +99,8 @@ cardLogo.innerHTML = visa;
 const monthSelect = document.getElementById("monthSelect");
 const yearSelect = document.getElementById("yearSelect");
 const currentYear = new Date().getFullYear();
+let currentMonth = new Date().getMonth() + 1;
+
 const startYear = 2020;
 const endYear = currentYear + 10;
 
@@ -117,3 +119,85 @@ for (let year = startYear; year <= endYear; year++) {
   option.textContent = year;
   yearSelect.appendChild(option);
 }
+
+//Input Error Handling
+let isValid = false;
+
+const cvvValue = document.getElementById("cvv");
+const btn = document.querySelector(".form-submit");
+const dateErr = document.querySelector(".card-date-err");
+const cvvErr = document.querySelector(".card-cvv-err");
+const nameErr = document.querySelector(".card-hold-err");
+
+btn.addEventListener("click", onFormSubmit);
+
+function onFormSubmit(e) {
+  console.log("yes");
+  const selectedMonth = monthSelect.value;
+  const selectedYear = "20" + yearSelect.value;
+
+  const cardNameIsValid = cardNameInput.value.trim().split(" ").length >= 2;
+  const cvvIsValid = cvvValue.value.length >= 3 && cvvValue.value.length <= 4;
+  const dateIsValid =
+    selectedYear >= currentYear &&
+    (selectedYear > currentYear || +currentMonth <= +selectedMonth);
+
+  // Check if date is valid
+  if (selectedMonth && selectedYear) {
+    if (!dateIsValid) {
+      dateErr.textContent = "Pick a future date";
+      dateErr.style.display = "block";
+    } else {
+      dateErr.style.display = "none";
+    }
+  } else {
+    dateErr.textContent = "Please select both month and year";
+    dateErr.style.display = "block";
+  }
+
+  // Checks if Cardname is valid
+  if (!cardNameIsValid) {
+    nameErr.style.display = "block";
+  } else {
+    nameErr.style.display = "none";
+  }
+
+  // Checks if CVV entered is valid
+  if (!cvvIsValid) {
+    cvvErr.style.display = "block";
+  } else {
+    cvvErr.style.display = "none";
+  }
+
+  if (cardNameIsValid && dateIsValid && cvvIsValid) {
+    isValid = true;
+  }
+
+  !isValid && e.preventDefault();
+  isValid ? alert("Your payment was successful") : null;
+}
+
+const cardName = document.getElementById("card-name");
+const cardDate = document.getElementById("card-date");
+const cardNameInput = document.getElementById("card-hold-input");
+
+cardNameInput.addEventListener("input", function (e) {
+  cardName.textContent = e.target.value
+    .replace(/[^a-zA-Z\s]/g, "")
+    .replace(/\s+/g, " ");
+});
+
+monthSelect.addEventListener("input", function (e) {
+  let dateArr = [];
+  dateArr.push(monthSelect.value);
+  dateArr.push(yearSelect.value);
+  cardDate.textContent = dateArr.join("/");
+});
+
+yearSelect.addEventListener("input", function (e) {
+  let dateArr = [];
+
+  dateArr.push(monthSelect.value);
+  dateArr.push(yearSelect.value);
+  cardDate.textContent = dateArr.join("/");
+});

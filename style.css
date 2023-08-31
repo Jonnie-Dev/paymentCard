@@ -48,6 +48,10 @@ input[type="number"] {
   display: none;
 }
 
+.cvv {
+  padding-right: 0.5rem;
+}
+
 .card-section {
   font-family: IBM Plex Mono;
   max-width: 28rem;
@@ -84,7 +88,7 @@ input[type="number"] {
       display: flex;
       flex-direction: column;
       gap: 8px;
-      text-align: center;
+      /* text-align: center; */
 
       & > p {
         color: #fff;

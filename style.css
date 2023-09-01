@@ -111,6 +111,7 @@ input[type="number"] {
 
     .card-holder {
       align-items: flex-start;
+      text-transform: uppercase;
     }
 
     .card-date {

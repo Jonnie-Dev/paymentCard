@@ -103,12 +103,10 @@ const input = document.querySelectorAll(".num-input");
   })
 );
 
-// cardLogo.innerHTML = visa;
-
 const monthSelect = document.getElementById("monthSelect");
 const yearSelect = document.getElementById("yearSelect");
 const currentYear = new Date().getFullYear();
-let currentMonth = new Date().getMonth() + 1;
+const currentMonth = new Date().getMonth() + 1;
 
 const startYear = 2020;
 const endYear = currentYear + 10;
@@ -169,6 +167,7 @@ function areHTMLStringsEqual(html1, html2) {
   return doc1.isEqualNode(doc2);
 }
 
+// OnSubmit Form function
 function onFormSubmit(e) {
   const selectedMonth = monthSelect.value;
   const selectedYear = "20" + yearSelect.value;
@@ -209,14 +208,16 @@ function onFormSubmit(e) {
     cvvErr.style.display = "none";
   }
 
-  if (cardNameIsValid && dateIsValid && cvvIsValid && cardNumIsValid) {
-    isValid = true;
-  }
   // Checks if card length is 16
   if (!cardNumIsValid) {
     cardNumErr.style.display = "block";
   } else {
     cardNumErr.style.display = "none";
+  }
+
+  // Checks if all input fields are error free
+  if (cardNameIsValid && dateIsValid && cvvIsValid && cardNumIsValid) {
+    isValid = true;
   }
 
   if (isValid) {
@@ -227,11 +228,6 @@ function onFormSubmit(e) {
 
   !isValid && e.preventDefault();
   isValid && alert("Your payment was successful");
-  // isValid
-  //   ? setTimeout(function () {
-  //       alert("Your payment was successful");
-  //     }, 1000)
-  //   : null;
 }
 
 const cardName = document.getElementById("card-name");

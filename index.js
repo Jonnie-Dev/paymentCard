@@ -238,7 +238,10 @@ const cardNameInput = document.getElementById("card-hold-input");
 cardNameInput.addEventListener("input", function (e) {
   cardName.textContent = e.target.value
     .replace(/[^a-zA-Z\s]/g, "")
-    .replace(/\s+/g, " ");
+    .replace(/\s+/g, " ")
+    .split(" ")
+    .slice(0, 3)
+    .join(" ");
 });
 
 // Update Card Expiry Date in the card preview

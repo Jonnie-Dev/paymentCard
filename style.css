@@ -118,9 +118,9 @@ input[type="number"] {
 .form-section {
   border-radius: 16px;
   width: 32rem;
-  padding: 120px 36px 24px;
+  padding: 150px 36px 24px;
   background-color: #fff;
-  margin-top: -80px;
+  margin-top: -120px;
 
   .card-num {
     margin-top: 0.25rem;

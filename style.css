@@ -64,12 +64,14 @@ input[type="number"] {
   gap: 80px;
   border-radius: 16px;
   background: linear-gradient(
-    144deg,
-    rgba(0, 0, 0, 0.54) 0%,
-    rgba(0, 0, 0, 0.82) 67.4%,
-    rgba(0, 0, 0, 0.77) 89.4%
+    115deg,
+    rgba(10, 16, 12, 0.54) -51.38%,
+    rgba(9, 15, 11, 0.82) 62.84%,
+    rgba(11, 16, 12, 0.77) 100.12%
   );
-  box-shadow: 21px 19px 19px -5px rgba(66, 77, 73, 0.25);
+
+  box-shadow: 21px 19px 19px -5px rgba(55, 60, 56, 0.25);
+
   backdrop-filter: blur(20px);
 
   .section-logos {
@@ -90,17 +92,19 @@ input[type="number"] {
       gap: 8px;
       /* text-align: center; */
 
-      & > p {
+      & > h4 {
         color: #fff;
-        font-size: 1rem;
-        font-size: clamp(1rem, 0.9rem + 0.5vw, 1.5rem);
+        font-size: 1.25rem;
+        font-size: clamp(1.25rem, 1.15rem + 0.5vw, 1.75rem);
         font-weight: 500;
         text-shadow: -1px 1px 0px rgba(255, 255, 255, 0.09);
+        -webkit-text-stroke: 3px #ffffff08;
       }
 
-      & > h4 {
-        color: rgba(255, 255, 255, 0.8);
-        font-size: 16px;
+      & > p {
+        color: rgba(238, 238, 238, 0.8);
+        font-size: 0.875rem;
+        font-size: clamp(0.875rem, 0.8rem + 0.375vw, 1.25rem);
         font-weight: 300;
       }
     }
@@ -229,12 +233,13 @@ input[type="number"] {
 
   .form-section {
     max-width: 24rem;
+    padding: 150px 16px 24px;
   }
 
   .expiration-date > div {
     & > select {
-      max-width: 4rem !important;
-      width: unset !important;
+      max-width: 5rem !important;
+      width: 4rem;
     }
   }
 }

@@ -243,4 +243,8 @@ input[type="number"] {
       width: 4rem;
     }
   }
+
+  .card-section {
+    margin: 1.5rem 1rem 0rem;
+  }
 }
